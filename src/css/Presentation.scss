@@ -1,0 +1,67 @@
+@import "global";
+
+.Presentation {
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+  padding: 38px 36px 56px;
+  background-color: $liteBlue;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  @include tablet() {
+    padding: 46px 77px 57px;
+  }
+  @include laptop() {
+    padding: 64px 70px 68px;
+  }
+  @include desktop() {
+    padding: 64px 0 71px;
+    // max-width: 100%;
+  }
+  .Presentation__header {
+    color: $darkBlue;
+    font-size: 30px;
+    font-family: "Roboto-Black";
+    line-height: 34px;
+    font-weight: 900px;
+    margin-bottom: 19px;
+  }
+  .Presentation__decorLine {
+    align-self: center;
+    margin-bottom: 37px;
+    @include laptop() {
+      margin-bottom: 50px;
+    }
+  }
+  .Presentation__paragraph {
+    color: $darkBlue;
+    font-family: "Roboto-Regular";
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 41px;
+    @include laptop() {
+      margin-bottom: 52px;
+    }
+    @include desktop() {
+      margin-bottom: 37px;
+    }
+  }
+  .Presentation__video {
+    width: 410px;
+    height: 202px;
+    @include tablet() {
+      width: 615px;
+      height: 303px;
+    }
+    @include laptop() {
+      width: 884px;
+      height: 434px;
+    }
+    @include desktop() {
+      width: 1140px;
+      height: 560px;
+    }
+  }
+}

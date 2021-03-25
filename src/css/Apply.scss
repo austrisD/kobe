@@ -1,0 +1,62 @@
+@import "global";
+
+.Apply {
+  box-sizing: border-box;
+  background-color: $liteBlue;
+  padding: 26px 44px 49px 36px;
+  width: max-content;
+  width: 100%;
+
+  @include tablet() {
+    padding: 26px 66px 54px 36px;
+  }
+  @include desktop() {
+  }
+  .Apply__heading {
+    font-size: 30px;
+    line-height: 62px;
+    color: #ffffff;
+    font-weight: 900;
+    font-family: "Roboto-Regular";
+    margin-bottom: 12px;
+  }
+  .Apply__decorLine {
+    margin-bottom: 43px;
+  }
+  .Apply__form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 33px;
+    .Apply__form__inputs {
+      margin-bottom: 12px;
+      input {
+        width: 100%;
+        line-height: 41px;
+        border-radius: 5px;
+        padding-left: 14px;
+        border: none;
+      }
+    }
+    .Apply__form__checkbox {
+      display: flex;
+      padding-top: 6px;
+      gap: 34px;
+      margin-bottom: 29px;
+    }
+    .Apply__form__submit {
+      box-sizing: border-box;
+      line-height: 53px;
+      text-align: center;
+      padding: 0 40px;
+      background-color: $darkBlue;
+      width: fit-content;
+      border-radius: 10px;
+      border: none;
+      margin: 0 auto;
+      font-size: 18px;
+      color: #ffffff;
+      font-weight: 700;
+      font-family: "Roboto-Regular";
+    }
+  }
+}

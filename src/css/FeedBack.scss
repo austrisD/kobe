@@ -1,0 +1,62 @@
+@import "global";
+
+.FeedBack {
+  background-color: $greyShade;
+  padding: 28px 35px 67px;
+  @include tablet() {
+    padding: 28px 76px 60px;
+  }
+  @include laptop() {
+    padding: 42px 70px 70px;
+  }
+  .FeedBack__header {
+    font-size: 30px;
+    text-align: left;
+    font-family: "Roboto-Black";
+    margin-bottom: 17px;
+  }
+  .FeedBack__decorLine {
+    margin-bottom: 38px;
+  }
+  .FeedBack__content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    @include laptop() {
+      flex-direction: row;
+    }
+  }
+}
+
+.client {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 35px;
+  max-width: 338px;
+  .client__image {
+    border-radius: 50%;
+    width: 141px;
+    height: 141px;
+    margin-bottom: 31px;
+  }
+  .client__description {
+    font-size: 16px;
+    line-height: 22px;
+    color: $textGray;
+    font-weight: 500;
+    word-spacing: -1px;
+    font-family: "Roboto-Italic";
+  }
+  .client__name {
+    font-size: 20px;
+    color: $mainOrange;
+    font-family: "Roboto-BlackItalic";
+    line-height: 22px;
+    .client__occupation {
+      font-family: "Roboto-LightItalic";
+      color: $textGray;
+    }
+  }
+}

@@ -1,0 +1,118 @@
+@import "./_global.scss";
+@font-face {
+  font-family: "Roboto-Black";
+  src: local("Roboto-Black"), url(../resources//fonts/Roboto-Black.ttf);
+}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: local("Roboto-Regular"), url(../resources//fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: "Roboto-Medium";
+  src: local("Roboto-Medium"), url(../resources//fonts/Roboto-Medium.ttf);
+}
+@font-face {
+  font-family: "Roboto-Light";
+  src: local("Roboto-Light"), url(../resources//fonts/Roboto-Light.ttf);
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: local("Roboto-Bold"), url(../resources//fonts/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: "Roboto-Italic";
+  src: local("Roboto-Italic"), url(../resources//fonts/Roboto-Italic.ttf);
+}
+
+@font-face {
+  font-family: "Roboto-BlackItalic";
+  src: local("Roboto-BlackItalic"), url(../resources//fonts/Roboto-BlackItalic.ttf);
+}
+@font-face {
+  font-family: "Roboto-LightItalic";
+  src: local("Roboto-LightItalic"), url(../resources//fonts/Roboto-LightItalic.ttf);
+}
+
+.App {
+  max-width: 1920px;
+  min-width: 480px;
+  margin: 0 auto;
+}
+
+.main {
+  padding: 0;
+  ////no padding!!!
+}
+.header__Background {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1920px;
+  position: fixed;
+  width: 100%;
+  height: 607px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  @include laptop() {
+    height: 552px;
+  }
+  @include desktop() {
+    height: 654px;
+  }
+}
+.outer__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  @include tablet() {
+    max-width: 685px;
+  }
+  @include laptop() {
+    max-width: 100%;
+  }
+  @include desktop() {
+    background-color: transparent;
+  }
+
+  .content__Warper {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    @include laptop() {
+      flex-direction: row;
+      max-width: 886px;
+    }
+    @include desktop() {
+      max-width: 1142px;
+    }
+  }
+  .main__content__text {
+    box-sizing: border-box;
+    position: relative;
+    font-family: "Roboto-Regular";
+    font-size: 16px;
+    color: $textGray;
+    padding: 16px 35px 27px;
+    text-align: left;
+    @include tablet() {
+      padding: 27px 35px 85px;
+    }
+    @include laptop() {
+      padding: 31px 0 55px;
+      max-width: 874px;
+    }
+    @include desktop() {
+      max-width: 1142px;
+      padding: 29px 41px 124px 10px;
+      background-color: #fff;
+    }
+  }
+}
