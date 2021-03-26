@@ -8,6 +8,8 @@ import { ApplyFree } from "./components/ApplyFree";
 import { Presentation } from "./components/Presentation";
 import { FeedBack } from "./components/FeedBack";
 import { FAQ } from "./components/FAQ";
+import { Consultant } from "./components/Consultant";
+import { Footer } from "./components/Footer";
 import "./css/reset.scss";
 import "./css/main.scss";
 import "./css/header.scss";
@@ -18,6 +20,8 @@ import "./css/ApplyFree.scss";
 import "./css/Presentation.scss";
 import "./css/FeedBack.scss";
 import "./css/FAQ.scss";
+import "./css/Consultant.scss";
+import "./css/Footer.scss";
 
 function App() {
   return (
@@ -45,6 +49,8 @@ function App() {
         <Presentation />
         <FeedBack />
         <FAQ />
+        <Consultant />
+        <Footer />
       </main>
     </div>
   );

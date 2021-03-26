@@ -55,28 +55,25 @@ export const About = () => {
         />
       </svg>
       <div className="sale_advert">
+        <div className="sale_arc">Garantēta naudas atgriešana</div>
         <div className="sale__wrapper">
-          <div className="sale_arc">Garantēta naudas atgriešana</div>
-          <div className="sale__offer">
-            <div className="sale__price">
-              <p className="sale__price__base">€145.00</p>
-              €95.
-              <sub style={{ verticalAlign: "baseline", fontSize: "50%" }}>
-                00*
-              </sub>
-            </div>
-            <p className="sale__price__description">
-              Pirmajiem 20 pieteikumiem
-            </p>
-            <div className="sale__text  text__tab">
-              <span className="sale__text__cache">Bez riska</span> Naudas
-              atmaksa, ja konsultācija Jūs neapmierinās.
-            </div>
+          <div className="sale__price">
+            <div className="sale__price__base">€145.00</div>
+            €95.
+            <sup
+              style={{
+                textAlignVertical: "top",
+                fontSize: "40px",
+              }}
+            >
+              00*
+            </sup>
           </div>
+          <p className="sale__apply20">Pirmajiem 20 pieteikumiem</p>
         </div>
-        <div className="sale__text text__mob">
-          <span className="sale__text__cache">Bez riska</span> Naudas atmaksa,
-          ja konsultācija Jūs neapmierinās.
+        <div className="sale__text ">
+          <span style={{ fontFamily: "Roboto-Black" }}>Bez riska</span> Naudas
+          atmaksa, ja konsultācija Jūs neapmierinās.
         </div>
       </div>
     </section>

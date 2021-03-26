@@ -26,11 +26,13 @@
 
 @font-face {
   font-family: "Roboto-BlackItalic";
-  src: local("Roboto-BlackItalic"), url(../resources//fonts/Roboto-BlackItalic.ttf);
+  src: local("Roboto-BlackItalic"),
+    url(../resources//fonts/Roboto-BlackItalic.ttf);
 }
 @font-face {
   font-family: "Roboto-LightItalic";
-  src: local("Roboto-LightItalic"), url(../resources//fonts/Roboto-LightItalic.ttf);
+  src: local("Roboto-LightItalic"),
+    url(../resources//fonts/Roboto-LightItalic.ttf);
 }
 
 .App {
@@ -69,29 +71,31 @@
   align-items: center;
   width: 100%;
   margin: 0 auto;
-  background-color: #fff;
   @include tablet() {
+    margin-bottom: 40px;
     max-width: 685px;
   }
   @include laptop() {
-    max-width: 100%;
+    max-width: 885px;
   }
   @include desktop() {
-    background-color: transparent;
+    max-width: 1142px;
   }
 
   .content__Warper {
+    box-sizing: border-box;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    width: 100%;
+    justify-content: center;
     margin: 0 auto;
+    width: 100%;
+    @include tablet() {
+    }
     @include laptop() {
       flex-direction: row;
-      max-width: 886px;
     }
     @include desktop() {
-      max-width: 1142px;
     }
   }
   .main__content__text {
@@ -102,17 +106,16 @@
     color: $textGray;
     padding: 16px 35px 27px;
     text-align: left;
+    background-color: #fff;
+    width: 100%;
     @include tablet() {
-      padding: 27px 35px 85px;
+      padding: 27px 35px 45px;
     }
     @include laptop() {
-      padding: 31px 0 55px;
-      max-width: 874px;
+      padding: 31px 20px 55px;
     }
     @include desktop() {
-      max-width: 1142px;
-      padding: 29px 41px 124px 10px;
-      background-color: #fff;
+      padding: 29px 41px 45px;
     }
   }
 }

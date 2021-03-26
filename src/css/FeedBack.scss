@@ -1,6 +1,10 @@
 @import "global";
 
 .FeedBack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
   background-color: $greyShade;
   padding: 28px 35px 67px;
   @include tablet() {
@@ -9,21 +13,34 @@
   @include laptop() {
     padding: 42px 70px 70px;
   }
+  @include desktop() {
+    padding: 42px 520px 52px 390px;
+  }
   .FeedBack__header {
     font-size: 30px;
     text-align: left;
     font-family: "Roboto-Black";
     margin-bottom: 17px;
+    text-align: left;
+    width: 100%;
   }
   .FeedBack__decorLine {
     margin-bottom: 38px;
+    margin-right: auto;
   }
   .FeedBack__content {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    align-items: center;
+    @include tablet() {
+      gap: 40px;
+    }
     @include laptop() {
       flex-direction: row;
+      gap: 60px;
+      max-width: 868px;
+      justify-content: center;
     }
   }
 }
@@ -35,28 +52,56 @@
   text-align: center;
   margin-bottom: 35px;
   max-width: 338px;
+  display: none;
+  &:nth-child(-n + 2) {
+    display: flex;
+  }
+  @include tablet() {
+    flex-direction: row;
+    max-width: 507px;
+    gap: 28px;
+    margin-bottom: 0;
+  }
+  @include laptop() {
+    display: flex;
+    max-width: 398px;
+  }
   .client__image {
     border-radius: 50%;
     width: 141px;
     height: 141px;
     margin-bottom: 31px;
+    @include tablet() {
+      margin-bottom: 0;
+    }
   }
-  .client__description {
-    font-size: 16px;
-    line-height: 22px;
-    color: $textGray;
-    font-weight: 500;
-    word-spacing: -1px;
-    font-family: "Roboto-Italic";
-  }
-  .client__name {
-    font-size: 20px;
-    color: $mainOrange;
-    font-family: "Roboto-BlackItalic";
-    line-height: 22px;
-    .client__occupation {
-      font-family: "Roboto-LightItalic";
+  .client__text__warper {
+    display: flex;
+    flex-direction: column;
+    .client__description {
+      font-size: 16px;
+      line-height: 22px;
       color: $textGray;
+      font-weight: 500;
+      word-spacing: -1px;
+      font-family: "Roboto-Italic";
+      margin-bottom: 5px;
+      @include tablet() {
+        text-align: left;
+      }
+    }
+    .client__name {
+      font-size: 20px;
+      color: $mainOrange;
+      font-family: "Roboto-BlackItalic";
+      line-height: 22px;
+      @include tablet() {
+        text-align: left;
+      }
+      .client__occupation {
+        font-family: "Roboto-LightItalic";
+        color: $textGray;
+      }
     }
   }
 }

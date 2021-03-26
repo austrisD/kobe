@@ -78,144 +78,136 @@
   .About__decorLine__long {
     opacity: 0.5;
   }
-  .sale_advert {
-    padding: 15px 22px 0 17px;
-    @include tablet() {
-      padding: 0 25px;
-    }
-    @include laptop() {
-      padding: 0;
-    }
-    .sale__wrapper {
-      display: flex;
-      flex-direction: row;
-      align-content: flex-end;
-      margin-bottom: 31px; /////////////!!!!!!
-      @include tablet() {
-        justify-content: space-between;
-        margin-bottom: 0;
-        margin-top: -15px;
-        justify-content: center;
-        gap: 33px;
-      }
-      @include laptop() {
-        margin-top: 22px;
-        align-content: flex-start;
-        margin-bottom: 23px;
-      }
-      @include desktop() {
-        margin-top: -15px;
-        justify-content: flex-start;
-      }
-      .sale_arc {
-        box-sizing: border-box;
-        display: flex;
-        align-items: center;
-        padding: 10px;
-        height: 132px;
-        min-width: 132px;
-        max-width: 132px;
-        background-color: $liteBlue;
-        border-radius: 50%;
-        text-align: center;
-        font-size: 16px;
-        font-family: "Roboto-Regular";
-        line-height: 18px;
-        color: #fff;
-        font-weight: 700;
-        transform: rotate(-10deg);
-      }
-      .sale__offer {
-        display: flex;
-        flex-direction: column;
-        text-align: right;
-        flex-wrap: wrap;
-        @include tablet() {
-          flex-direction: row;
-          align-items: flex-end;
-          align-content: flex-end;
-          justify-content: space-between;
-        }
-        @include laptop() {
-          gap: 18px;
-        }
-        @include desktop() {
-          gap: 0;
-        }
-        .sale__price {
-          font-size: 69px;
-          font-family: "Roboto-Black";
-          line-height: 52px;
-          font-weight: 900;
-          color: $darkBlue;
-          max-height: 52px;
-          max-width: 200px;
-          .sale__price__base {
-            display: block;
-            font-size: 17px;
-            line-height: 17px;
-            margin-bottom: -17px;
-            text-decoration: line-through;
-            color: #ffffff;
-            font-weight: 900;
-            font-family: "Roboto-Regular";
-          }
-        }
-        .sale__price__description {
-          display: block;
-          width: 200px;
-          font-size: 28px;
-          line-height: 26px;
-          color: #123754;
-          font-weight: 500;
-          font-family: "Roboto-Regular";
-          text-align: justify;
-          letter-spacing: 2.8px;
-          @include tablet() {
-            max-width: 190px;
-            letter-spacing: 2px;
-          }
-        }
-      }
-    }
-  }
 }
-.text__mob {
-  display: none;
+
+.sale_advert {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 15px;
+  padding-left: 17px;
+  gap: 31px;
+  align-items: center;
+  justify-content: center;
   @include tablet() {
-    white-space: nowrap;
-  }
-  @include desktop() {
-    display: none;
-  }
-}
-.text__tab {
-  display: none;
-  @include tablet() {
-    display: block;
-    padding-top: 15px;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 0;
+    margin-right: 26px;
+    margin-top: -30px;
   }
   @include laptop() {
-    display: none;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    padding-top: 22px;
+    padding-left: 0;
   }
   @include desktop() {
-    display: block;
-    width: 100%;
-    white-space: nowrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-right: 29px;
+    padding-top: 0px;
+  }
+  .sale_arc {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    background-color: $liteBlue;
+    border-radius: 50%;
+    width: 132px;
+    height: 132px;
+    text-align: center;
+    color: #fff;
+    font-family: "Roboto-Bold";
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    transform: rotate(-10deg);
+    padding: 0 10px;
+    @include tablet() {
+      margin-right: 31px;
+      margin-bottom: -17px;
+    }
+    @include laptop() {
+      margin-bottom: 0;
+    }
+    @include desktop() {
+      margin-bottom: -32px;
+      margin-top: -15px;
+    }
+  }
+  .sale__price {
+    font-size: 69px;
+    letter-spacing: -2px;
+    max-height: 52px;
+    line-height: 52px;
+    color: $darkBlue;
+    font-weight: 900;
+    font-family: "Roboto-Black";
+    text-align: center;
+    margin-bottom: 12px;
+    @include tablet() {
+      margin-bottom: 15px;
+    }
+    @include laptop() {
+      margin-bottom: 0;
+    }
+    .sale__price__base {
+      font-size: 17px;
+      text-decoration: line-through;
+      color: #ffffff;
+      font-weight: 900;
+      font-family: "Roboto-Regular";
+      text-align: right;
+      margin-bottom: -17px;
+      line-height: 17px;
+      letter-spacing: 0;
+    }
+  }
+  .sale__apply20 {
+    color: $darkBlue;
+    font-family: "Roboto-Medium";
+    font-weight: 500;
+    line-height: 26px;
+    font-size: 28px;
+    max-width: 190px;
+    text-align: justify;
+    letter-spacing: 1.5px;
+  }
+
+  .sale__text {
+    width: max-content;
+    color: #fff;
+    font-family: "Roboto-Regular";
+    font-size: 17px;
+    max-width: 290px;
+    letter-spacing: -1px;
+    text-align: center;
+    @include tablet() {
+      max-width: 407px;
+    }
+    @include laptop() {
+      margin-top: 23px;
+      white-space: nowrap;
+    }
+    @include desktop() {
+      margin-top: 13px;
+    }
   }
 }
-.sale__text {
-  font-size: 14px;
-  color: #ffffff;
-  font-weight: 900;
-  font-family: "Roboto-Regular";
-  text-align: center;
-  @include tablet(){
-    white-space: nowrap;
-    
+
+.sale__wrapper {
+  display: flex;
+  flex-direction: column;
+  @include tablet() {
+    flex-direction: row;
+    gap: 15px;
   }
-  .sale__text__cache {
-    font-family: "Roboto-Black";
-    font-size: 17px;
+  @include laptop() {
+    flex-direction: column;
+  }
+  @include desktop() {
+    flex-direction: row;
   }
 }

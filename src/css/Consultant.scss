@@ -1,0 +1,71 @@
+@import "global";
+
+.Consultant {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $liteBlue;
+  padding: 42px 80px 45px;
+  @include tablet() {
+    padding: 42px 80px 80px;
+  }
+  @include laptop() {
+    padding: 51px 85px 53px;
+  }
+  @include desktop() {
+    padding: 42px 415px 61px;
+  }
+  .Consultant__header {
+    font-size: 30px;
+    color: $darkBlue;
+    font-family: "Roboto-Black";
+    margin-bottom: 17px;
+  }
+  .Consultant__decorLine {
+    margin-bottom: 51px;
+  }
+}
+.Consultant__Content {
+  display: flex;
+  flex-direction: column;
+  //   align-items: center;
+  //   justify-content: center;
+  gap: 60px;
+  justify-content: center;
+  align-items: flex-start;
+
+  @include laptop() {
+    flex-direction: row;
+  }
+  .Consultant__element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: $darkBlue;
+    @include laptop() {
+      max-width: 260px;
+    }
+    @include desktop() {
+      max-width: 310px;
+    }
+    svg {
+      margin-bottom: 30px;
+    }
+    .Consultant__element__heading {
+      width: fit-content;
+      font-size: 32px;
+      margin-bottom: 23px;
+      font-family: "Roboto-Bold";
+      @include laptop() {
+        font-size: 26px;
+        margin-bottom: 17px;
+      }
+    }
+    .Consultant__element__paragraph {
+      font-family: "Roboto-Regular";
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@import "global";
+
+.Footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: $darkBlue;
+  padding: 34px 36px 61px;
+  @include tablet() {
+    padding: 38px 78px 39px;
+  }
+  @include laptop() {
+    padding: 43px 71px 46px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  @include desktop() {
+    padding: 45px 389px 47px;
+  }
+  h3 {
+    color: #fff;
+    font-family: "Roboto-Black";
+    font-size: 30px;
+    text-align: left;
+    margin-bottom: 27px;
+    width: 100%;
+  }
+  th,
+  p {
+    color: #fff;
+    font-size: 14px;
+    font-family: "Roboto-Regular";
+    text-align: left;
+  }
+  table {
+    margin-bottom: 41px;
+    @include laptop() {
+      margin-bottom: 0;
+    }
+  }
+  .Footer__copy {
+    @include laptop() {
+      text-align: right;
+      width: fit-content;
+    }
+  }
+}
+tbody {
+  tr {
+    height: 28px;
+    &:last-child {
+      height: fit-content;
+    }
+  }
+}

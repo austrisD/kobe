@@ -129,3 +129,5 @@ export const Marketing = () => {
     </section>
   );
 };
+
+////adjust element widths
