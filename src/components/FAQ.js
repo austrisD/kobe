@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function PlaceholderText() {
   return (
@@ -28,31 +28,47 @@ function PlaceholderText() {
   );
 }
 
-let FaqElement = ({ heading, description }) => {
-  const [Active, setActive] = useState(false);
+let FaqElement = ({
+  heading,
+  description,
+  elementNr,
+  setActiveElement,
+  ActiveElement,
+}) => {
   return (
     <div className="FaqElement">
       <div
         className="FaqElement__heading"
         onClick={() => {
-          setActive(Active ? false : true);
-          console.log(Active);
+          ActiveElement.nr !== elementNr
+            ? setActiveElement({ nr: elementNr, value: description })
+            : setActiveElement(0);
         }}
       >
         <div
           className="FaqElement__circle"
-          style={{ backgroundColor: Active ? "#78cacf" : "#fb7840" }}
+          style={{
+            backgroundColor:
+              ActiveElement.nr === elementNr ? "#78cacf" : "#fb7840",
+          }}
         >
           ?
         </div>
         {heading}
       </div>
-      {Active ? <p className="FaqElement__description">{description}</p> : ""}
+      {ActiveElement.nr === elementNr ? (
+        <p className="FaqElement__description">{description}</p>
+      ) : (
+        ""
+      )}
     </div>
   );
 };
 
 export const FAQ = () => {
+  const [ActiveElement, setActiveElement] = useState(0);
+
+  let nr = 1;
   return (
     <section className="FAQ">
       <h3 className="FAQ__header">Biežāk uzdotie jautājumi par konsultāciju</h3>
@@ -66,28 +82,51 @@ export const FAQ = () => {
         />
       </svg>
       <div className="FAQ__content">
-        <FaqElement
-          heading={"Kā šī konsultācija man palīdzēs?"}
-          description={<PlaceholderText />}
-        />
-        <FaqElement
-          heading={"Kur un kā ir iespējams saņemt konsultāciju?"}
-          description={<PlaceholderText />}
-        />
-        <FaqElement
-          heading={"Cik ilga ir web konsultācija?"}
-          description={<PlaceholderText />}
-        />
-        <FaqElement
-          heading={
-            "Vai es varēšu saņemt atpakaļ naudu,ja konsultācija mani neapmierinās?"
-          }
-          description={<PlaceholderText />}
-        />
-        <FaqElement
-          heading={"Kā notiek samaksa par konsultāciju?"}
-          description={<PlaceholderText />}
-        />
+        <div className="FAQ__content__wrapper">
+          <FaqElement
+            setActiveElement={setActiveElement}
+            ActiveElement={ActiveElement}
+            elementNr={nr++}
+            heading={"Kā šī konsultācija man palīdzēs?"}
+            description={<PlaceholderText />}
+          />
+          <FaqElement
+            setActiveElement={setActiveElement}
+            ActiveElement={ActiveElement}
+            elementNr={nr++}
+            heading={"Kur un kā ir iespējams saņemt konsultāciju?"}
+            description={<PlaceholderText />}
+          />
+          <FaqElement
+            setActiveElement={setActiveElement}
+            ActiveElement={ActiveElement}
+            elementNr={nr++}
+            heading={"Cik ilga ir web konsultācija?"}
+            description={<PlaceholderText />}
+          />
+          <FaqElement
+            setActiveElement={setActiveElement}
+            ActiveElement={ActiveElement}
+            elementNr={nr++}
+            heading={
+              "Vai es varēšu saņemt atpakaļ naudu,ja konsultācija mani neapmierinās?"
+            }
+            description={<PlaceholderText />}
+          />
+          <FaqElement
+            setActiveElement={setActiveElement}
+            ActiveElement={ActiveElement}
+            elementNr={nr++}
+            heading={"Kā notiek samaksa par konsultāciju?"}
+            description={<PlaceholderText />}
+          />
+        </div>
+        <p
+          style={{ display: ActiveElement.value !== undefined? "block" : "none" }}
+          className="FaqElement__description  descriptionDesktop"
+        >
+          {ActiveElement.value}
+        </p>
       </div>
     </section>
   );

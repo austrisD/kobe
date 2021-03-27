@@ -27,8 +27,15 @@
   }
   .FAQ__content {
     display: flex;
-    flex-direction: column;
-    gap: 22px;
+    flex-direction: row;
+    @include laptop() {
+      justify-content: space-between;
+    }
+    .FAQ__content__wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
   }
 }
 @keyframes dropOut {
@@ -42,6 +49,13 @@
 .FaqElement {
   transition: 1s;
   height: fit-content;
+  @include laptop() {
+    max-width: 359px;
+  }
+  @include desktop(){
+    max-width: 557px;
+  }
+
   .FaqElement__heading {
     display: flex;
     flex-direction: row;
@@ -64,7 +78,6 @@
     }
   }
   .FaqElement__description {
-    overflow: scroll;
     margin-top: 23px;
     background-color: $greyShade;
     padding: 25px 25px 36px;
@@ -72,10 +85,24 @@
     font-family: "Roboto-Regular";
     font-size: 14px;
     transition: 1s;
-    transform: rotate3d(180deg);
-    // animation-name: dropOut;
-    // animation-duration: 1s;
-    // animation-iteration-count: 1;
-    // animation-fill-mode: both;
+    @include laptop() {
+      display: none;
+    }
+  }
+}
+.descriptionDesktop {
+  box-sizing: border-box;
+  display: none;
+  max-width: 449px;
+  background-color: $greyShade;
+  padding: 25px 25px 36px;
+  color: $textGray;
+  font-family: "Roboto-Regular";
+  font-size: 14px;
+  @include laptop() {
+    display: block;
+  }
+  @include desktop() {
+    max-width: 571px;
   }
 }

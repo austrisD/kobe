@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/kobe/static/css/main.d844104f.chunk.css",
-    "main.js": "/kobe/static/js/main.35d39e78.chunk.js",
-    "main.js.map": "/kobe/static/js/main.35d39e78.chunk.js.map",
+    "main.css": "/kobe/static/css/main.06cd5d4a.chunk.css",
+    "main.js": "/kobe/static/js/main.29a162a3.chunk.js",
+    "main.js.map": "/kobe/static/js/main.29a162a3.chunk.js.map",
     "runtime-main.js": "/kobe/static/js/runtime-main.3603ec08.js",
     "runtime-main.js.map": "/kobe/static/js/runtime-main.3603ec08.js.map",
     "static/js/2.920f3f9d.chunk.js": "/kobe/static/js/2.920f3f9d.chunk.js",
     "static/js/2.920f3f9d.chunk.js.map": "/kobe/static/js/2.920f3f9d.chunk.js.map",
     "index.html": "/kobe/index.html",
-    "static/css/main.d844104f.chunk.css.map": "/kobe/static/css/main.d844104f.chunk.css.map",
+    "static/css/main.06cd5d4a.chunk.css.map": "/kobe/static/css/main.06cd5d4a.chunk.css.map",
     "static/js/2.920f3f9d.chunk.js.LICENSE.txt": "/kobe/static/js/2.920f3f9d.chunk.js.LICENSE.txt",
     "static/media/Background.5d573b0c.jpeg": "/kobe/static/media/Background.5d573b0c.jpeg",
     "static/media/GearHead.270faba9.svg": "/kobe/static/media/GearHead.270faba9.svg",
@@ -24,7 +24,7 @@
   "entrypoints": [
     "static/js/runtime-main.3603ec08.js",
     "static/js/2.920f3f9d.chunk.js",
-    "static/css/main.d844104f.chunk.css",
-    "static/js/main.35d39e78.chunk.js"
+    "static/css/main.06cd5d4a.chunk.css",
+    "static/js/main.29a162a3.chunk.js"
   ]
 }
