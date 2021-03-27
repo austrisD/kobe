@@ -6,7 +6,7 @@ export const About = () => {
     return (
       <div className="List__item">
         <div className="list__nr">{list_nr++}</div>
-        {/***works well deployed */}
+        {/***works well deployed  list_nr++  list_nr++ /2 works well  on test server */}
         <p className="list__text">{text}</p>
       </div>
     );
