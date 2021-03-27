@@ -5,7 +5,8 @@ export const About = () => {
   const ListElement = ({ text }) => {
     return (
       <div className="List__item">
-        <div className="list__nr">{list_nr++ / 2}</div>
+        <div className="list__nr">{list_nr++}</div>
+        {/***works well deployed */}
         <p className="list__text">{text}</p>
       </div>
     );

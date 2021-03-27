@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/Test/static/css/main.cb8aae73.chunk.css",
+    "main.js": "/Test/static/js/main.35d39e78.chunk.js",
+    "main.js.map": "/Test/static/js/main.35d39e78.chunk.js.map",
+    "runtime-main.js": "/Test/static/js/runtime-main.f5073aed.js",
+    "runtime-main.js.map": "/Test/static/js/runtime-main.f5073aed.js.map",
+    "static/js/2.920f3f9d.chunk.js": "/Test/static/js/2.920f3f9d.chunk.js",
+    "static/js/2.920f3f9d.chunk.js.map": "/Test/static/js/2.920f3f9d.chunk.js.map",
+    "index.html": "/Test/index.html",
+    "static/css/main.cb8aae73.chunk.css.map": "/Test/static/css/main.cb8aae73.chunk.css.map",
+    "static/js/2.920f3f9d.chunk.js.LICENSE.txt": "/Test/static/js/2.920f3f9d.chunk.js.LICENSE.txt",
+    "static/media/Background.5d573b0c.jpeg": "/Test/static/media/Background.5d573b0c.jpeg",
+    "static/media/GearHead.270faba9.svg": "/Test/static/media/GearHead.270faba9.svg",
+    "static/media/LitheBulb.57476d26.svg": "/Test/static/media/LitheBulb.57476d26.svg",
+    "static/media/main.scss": "/Test/static/media/Roboto-Regular.71779d80.ttf",
+    "static/media/SmartWhite.00ade81f.svg": "/Test/static/media/SmartWhite.00ade81f.svg",
+    "static/media/Vector_Doc_Object.c7dc4c00.svg": "/Test/static/media/Vector_Doc_Object.c7dc4c00.svg",
+    "static/media/Vector_Smart_Object.2d87199b.svg": "/Test/static/media/Vector_Smart_Object.2d87199b.svg",
+    "static/media/Vector_Tools_Object.f0bcb7fb.svg": "/Test/static/media/Vector_Tools_Object.f0bcb7fb.svg",
+    "static/media/header.scss": "/Test/static/media/director__tablet.b2ffa655.webp",
+    "static/media/header_pc.b613a985.svg": "/Test/static/media/header_pc.b613a985.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f5073aed.js",
+    "static/js/2.920f3f9d.chunk.js",
+    "static/css/main.cb8aae73.chunk.css",
+    "static/js/main.35d39e78.chunk.js"
+  ]
+}
