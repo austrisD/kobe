@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/kobe/static/css/main.17ece1aa.chunk.css",
-    "main.js": "/kobe/static/js/main.47ad3a76.chunk.js",
-    "main.js.map": "/kobe/static/js/main.47ad3a76.chunk.js.map",
+    "main.css": "/kobe/static/css/main.16fe42b1.chunk.css",
+    "main.js": "/kobe/static/js/main.ffaa6b8f.chunk.js",
+    "main.js.map": "/kobe/static/js/main.ffaa6b8f.chunk.js.map",
     "runtime-main.js": "/kobe/static/js/runtime-main.3603ec08.js",
     "runtime-main.js.map": "/kobe/static/js/runtime-main.3603ec08.js.map",
-    "static/js/2.920f3f9d.chunk.js": "/kobe/static/js/2.920f3f9d.chunk.js",
-    "static/js/2.920f3f9d.chunk.js.map": "/kobe/static/js/2.920f3f9d.chunk.js.map",
+    "static/js/2.be9e88dc.chunk.js": "/kobe/static/js/2.be9e88dc.chunk.js",
+    "static/js/2.be9e88dc.chunk.js.map": "/kobe/static/js/2.be9e88dc.chunk.js.map",
     "index.html": "/kobe/index.html",
-    "static/css/main.17ece1aa.chunk.css.map": "/kobe/static/css/main.17ece1aa.chunk.css.map",
-    "static/js/2.920f3f9d.chunk.js.LICENSE.txt": "/kobe/static/js/2.920f3f9d.chunk.js.LICENSE.txt",
+    "static/css/main.16fe42b1.chunk.css.map": "/kobe/static/css/main.16fe42b1.chunk.css.map",
+    "static/js/2.be9e88dc.chunk.js.LICENSE.txt": "/kobe/static/js/2.be9e88dc.chunk.js.LICENSE.txt",
     "static/media/Background.5d573b0c.jpeg": "/kobe/static/media/Background.5d573b0c.jpeg",
     "static/media/GearHead.270faba9.svg": "/kobe/static/media/GearHead.270faba9.svg",
     "static/media/LitheBulb.57476d26.svg": "/kobe/static/media/LitheBulb.57476d26.svg",
@@ -24,8 +24,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.3603ec08.js",
-    "static/js/2.920f3f9d.chunk.js",
-    "static/css/main.17ece1aa.chunk.css",
-    "static/js/main.47ad3a76.chunk.js"
+    "static/js/2.be9e88dc.chunk.js",
+    "static/css/main.16fe42b1.chunk.css",
+    "static/js/main.ffaa6b8f.chunk.js"
   ]
 }
