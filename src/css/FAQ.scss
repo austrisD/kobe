@@ -2,6 +2,9 @@
 
 .FAQ {
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
   width: 100%;
   background-color: #fff;
   padding: 26px 34px 49px;
@@ -10,26 +13,41 @@
   }
   @include laptop() {
     padding: 55px 67px 65px;
+    align-items: center;
   }
   @include desktop() {
     padding: 67px 387px 65px;
+    align-items: flex-start;
   }
-  .FAQ__header {
-    font-size: 30px;
-    line-height: 62px;
-    color: #272727;
-    font-weight: 900;
-    font-family: "Roboto-Black";
-    margin-bottom: 14px;
+  .FAQ__header__wrapper {
+    @include laptop() {
+      min-width: 855px;
+    }
+    @include desktop() {
+      min-width: none;
+    }
+    .FAQ__header {
+      font-size: 30px;
+      line-height: 62px;
+      color: #272727;
+      font-weight: 900;
+      font-family: "Roboto-Black";
+      margin-bottom: 14px;
+    }
+    .FAQ__decorLine {
+      margin-bottom: 42px;
+    }
   }
-  .FAQ__decorLine {
-    margin-bottom: 42px;
-  }
+
   .FAQ__content {
     display: flex;
     flex-direction: row;
     @include laptop() {
       justify-content: space-between;
+      min-width: 855px;
+    }
+    @include desktop() {
+      min-width: none;
     }
     .FAQ__content__wrapper {
       display: flex;
@@ -38,17 +56,17 @@
     }
   }
 }
-@keyframes dropOut {
+@keyframes slide {
   form {
-    height: 0;
+    color: red;
   }
   to {
-    height: 100%;
+    color: #272727;
   }
 }
 .FaqElement {
+  box-sizing: border-box;
   transition: 1s;
-  height: fit-content;
   @include laptop() {
     max-width: 359px;
   }
@@ -84,10 +102,19 @@
     color: $textGray;
     font-family: "Roboto-Regular";
     font-size: 14px;
-    transition: 1s;
+    animation-name: slide;
+    animation-duration: 1s;
     @include laptop() {
       display: none;
     }
+  }
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 .descriptionDesktop {
@@ -99,6 +126,12 @@
   color: $textGray;
   font-family: "Roboto-Regular";
   font-size: 14px;
+  animation-name: appear;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  @include laptop() {
+    display: block;
+  }
   @include desktop() {
     max-width: 571px;
   }

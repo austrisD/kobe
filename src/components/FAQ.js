@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 function PlaceholderText() {
   return (
@@ -71,16 +71,21 @@ export const FAQ = () => {
   let nr = 1;
   return (
     <section className="FAQ">
-      <h3 className="FAQ__header">Biežāk uzdotie jautājumi par konsultāciju</h3>
-      <svg height="3" width="213px" className="FAQ__decorLine">
-        <line
-          x1="0"
-          y1="0"
-          x2="213"
-          y2="0"
-          style={{ stroke: "#fb7840", strokeWidth: "3px" }}
-        />
-      </svg>
+      <div className="FAQ__header__wrapper">
+        <h3 className="FAQ__header">
+          Biežāk uzdotie jautājumi par konsultāciju
+        </h3>
+        <svg height="3" width="213px" className="FAQ__decorLine">
+          <line
+            x1="0"
+            y1="0"
+            x2="213"
+            y2="0"
+            style={{ stroke: "#fb7840", strokeWidth: "3px" }}
+          />
+        </svg>
+      </div>
+
       <div className="FAQ__content">
         <div className="FAQ__content__wrapper">
           <FaqElement
@@ -123,10 +128,7 @@ export const FAQ = () => {
         </div>
         <p
           style={{
-            display:
-              ActiveElement.value !== undefined && window.innerWidth > 1024
-                ? "block"
-                : "none",
+            opacity: ActiveElement.value !== undefined ? "1" : "0",
           }}
           className="FaqElement__description  descriptionDesktop"
         >
@@ -136,3 +138,5 @@ export const FAQ = () => {
     </section>
   );
 };
+
+//augstums  pieklibo slēdzot iekšā araaa + sekcijas platums...
