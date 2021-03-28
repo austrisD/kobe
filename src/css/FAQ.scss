@@ -119,6 +119,8 @@
 }
 .descriptionDesktop {
   box-sizing: border-box;
+  position: absolute;
+  transform: translateX(100%);
   display: none;
   max-width: 449px;
   background-color: $greyShade;
