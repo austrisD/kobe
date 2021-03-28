@@ -3,13 +3,17 @@
 .Apply {
   box-sizing: border-box;
   background-color: $liteBlue;
-  padding: 26px 44px 49px 36px;
+  padding: 26px 44px 73px 36px;
   width: max-content;
   width: 100%;
   @include tablet() {
-    padding: 26px 66px 54px 36px;
+    padding: 26px 66px 78px 36px;
+  }
+  @include laptop() {
+    padding: 26px 23px 122px;
   }
   @include desktop() {
+    padding: 31px 45px 56px;
   }
   .Apply__heading {
     font-size: 30px;
@@ -26,6 +30,7 @@
     display: flex;
     flex-direction: column;
     padding-left: 33px;
+    margin-bottom: 69px;
     .Apply__form__inputs {
       margin-bottom: 12px;
       input {
@@ -56,6 +61,61 @@
       color: #ffffff;
       font-weight: 700;
       font-family: "Roboto-Regular";
+    }
+  }
+}
+
+.apply__process {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+  width: fit-content;
+  align-items: flex-start;
+  svg {
+    transform: translateY(-100%);
+  }
+  .apply__process__step {
+    padding: 0 15px 12px; ///posable margin
+    .apply__circle {
+      text-align: center;
+      width: 27px;
+      line-height: 27px;
+      border-radius: 50%;
+      background-color: $darkBlue;
+      color: #ffffff;
+      font-size: 14px;
+      font-family: "Roboto-Black";
+      .apply__content {
+        box-sizing: border-box;
+        position: absolute;
+        display: none;
+        border-radius: 10px;
+        background-color: #fff;
+        padding: 20px;
+        transform: translate(27px, calc(-100% - 27px));
+        max-width: 201px;
+        color: $darkBlue;
+        font-family: "Roboto-Regular";
+        font-size: 12px;
+        line-height: 14px;
+        text-align: left;
+      }
+      cursor: pointer;
+      &:hover {
+        background-color: $mainOrange;
+        .apply__content {
+          display: block;
+        }
+      }
+    }
+    .apply__process__step__name {
+      position: absolute;
+      transform: translateX(-50%);
+      color: #fff;
+      font-family: "Roboto-Bold";
+      font-size: 14px;
+      margin-top: 14px;
     }
   }
 }

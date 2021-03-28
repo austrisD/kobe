@@ -52,7 +52,7 @@
   @include laptop() {
     max-width: 359px;
   }
-  @include desktop(){
+  @include desktop() {
     max-width: 557px;
   }
 
@@ -99,9 +99,6 @@
   color: $textGray;
   font-family: "Roboto-Regular";
   font-size: 14px;
-  @include laptop() {
-    display: block;
-  }
   @include desktop() {
     max-width: 571px;
   }

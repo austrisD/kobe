@@ -1,4 +1,5 @@
 import React from "react";
+import { ReactComponent as StepArrow } from "../resources/svg/step__arrow.svg";
 
 export const Apply = () => {
   return (
@@ -40,6 +41,45 @@ export const Apply = () => {
           Pieteikties tūlīt
         </button>
       </form>
+      <div className="apply__process">
+        <div className="apply__process__step">
+          <div className="apply__circle">
+            1
+            <div className="apply__content">
+              Mūsu pieredze rāda – katrs par konsultāciju samaksātais eiro Jums
+              ietaupīs vidēji 32 EUR jau pirmajā web lapas izstrādes un
+              uzturēšan.
+            </div>
+          </div>
+          <div className="apply__process__step__name">Piesakies</div>
+        </div>
+        <StepArrow />
+
+        <div className="apply__process__step">
+          <div className="apply__circle">
+            2
+            <div className="apply__content">
+              Mūsu pieredze rāda – katrs par konsultāciju samaksātais eiro Jums
+              ietaupīs vidēji 32 EUR jau pirmajā web lapas izstrādes un
+              uzturēšan.
+            </div>
+          </div>
+          <div className="apply__process__step__name">Apmaksā rēķinu</div>
+        </div>
+        <StepArrow />
+
+        <div className="apply__process__step">
+          <div className="apply__circle">
+            3
+            <div className="apply__content">
+              Mūsu pieredze rāda – katrs par konsultāciju samaksātais eiro Jums
+              ietaupīs vidēji 32 EUR jau pirmajā web lapas izstrādes un
+              uzturēšan.
+            </div>
+          </div>
+          <div className="apply__process__step__name">Saņem konsultāciju</div>
+        </div>
+      </div>
     </section>
   );
 };

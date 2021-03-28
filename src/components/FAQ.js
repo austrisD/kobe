@@ -122,7 +122,12 @@ export const FAQ = () => {
           />
         </div>
         <p
-          style={{ display: ActiveElement.value !== undefined? "block" : "none" }}
+          style={{
+            display:
+              ActiveElement.value !== undefined && window.innerWidth > 1024
+                ? "block"
+                : "none",
+          }}
           className="FaqElement__description  descriptionDesktop"
         >
           {ActiveElement.value}
