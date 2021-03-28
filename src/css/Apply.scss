@@ -31,21 +31,49 @@
     flex-direction: column;
     padding-left: 33px;
     margin-bottom: 69px;
+    @include laptop() {
+      padding-left: 0;
+    }
     .Apply__form__inputs {
       margin-bottom: 12px;
+      &:hover {
+        box-shadow: 5px 5px 10px #65aaae, -5px -5px 10px #8beaf0;
+      }
       input {
+        box-sizing: border-box;
         width: 100%;
         line-height: 41px;
         border-radius: 5px;
         padding-left: 14px;
         border: none;
+        &:focus {
+          outline: none;
+        }
       }
     }
     .Apply__form__checkbox {
       display: flex;
-      padding-top: 6px;
-      gap: 34px;
+      padding-top: 8px;
       margin-bottom: 29px;
+      gap: 34px;
+      .checkbox__wrapper {
+        display: flex;
+        flex-direction: row;
+        label {
+          display: block;
+          border: 1px solid #cacaca;
+          background-color: #fff;
+          width: 18px;
+          height: 18px;
+          margin-right: 10px;
+          input {
+            opacity: 0;
+          }
+          &:hover {
+            box-shadow: 5px 5px 10px #65aaae, -5px -5px 10px #8beaf0;
+          }
+        }
+      }
     }
     .Apply__form__submit {
       box-sizing: border-box;
@@ -61,6 +89,10 @@
       color: #ffffff;
       font-weight: 700;
       font-family: "Roboto-Regular";
+      cursor: pointer;
+      &:hover {
+        box-shadow: 13px 13px 25px #67aeb2, -13px -13px 25px #89e6ec;
+      }
     }
   }
 }
@@ -74,9 +106,21 @@
   align-items: flex-start;
   svg {
     transform: translateY(-100%);
+    @include laptop() {
+      margin-left: -14px; //asda
+    }
+    @include desktop() {
+      margin: 0;
+    }
   }
   .apply__process__step {
     padding: 0 15px 12px; ///posable margin
+    @include laptop() {
+      padding: 0 0 12px 15px;
+    }
+    @include desktop() {
+      padding: 0 15px 12px;
+    }
     .apply__circle {
       text-align: center;
       width: 27px;
@@ -87,6 +131,7 @@
       font-size: 14px;
       font-family: "Roboto-Black";
       .apply__content {
+        display: block;
         box-sizing: border-box;
         position: absolute;
         display: none;
@@ -94,12 +139,13 @@
         background-color: #fff;
         padding: 20px;
         transform: translate(27px, calc(-100% - 27px));
-        max-width: 201px;
+        width: 201px;
         color: $darkBlue;
         font-family: "Roboto-Regular";
         font-size: 12px;
         line-height: 14px;
         text-align: left;
+        z-index: 5;
       }
       cursor: pointer;
       &:hover {
@@ -116,6 +162,7 @@
       font-family: "Roboto-Bold";
       font-size: 14px;
       margin-top: 14px;
+      text-align: center;
     }
   }
 }
