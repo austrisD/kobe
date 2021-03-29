@@ -46,6 +46,7 @@
 }
 
 .client {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -86,6 +87,7 @@
       word-spacing: -1px;
       font-family: "Roboto-Italic";
       margin-bottom: 5px;
+      word-wrap: anywhere;
       @include tablet() {
         text-align: left;
       }

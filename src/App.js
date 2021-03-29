@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Background from "./resources/jpg/Background.jpeg";
 import { Header } from "./components/header";
 import { About } from "./components/About";
