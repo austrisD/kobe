@@ -22,22 +22,19 @@ export const FeedBack = () => {
     );
   };
   const getRevives = (set) => {
-    fetch("https://ad-konsultants.kebbeit.dev/wp-json/wp/v2/posts")
+    fetch("https://ad-konsultants.kebbeit.dev/wp-json/wp/v2/Reviews")
       .then((response) => response.json())
       .then((response) => {
         set(
           response.map((value, id) => {
-            console.log(value);
-            const src = value.content.rendered
-              .match(/(src=")(.*?)(?=")/g)[0]
-              .slice(5);
+            // console.log(value);
             return (
               <div key={id}>
                 <Client
                   name={value.title.rendered}
-                  occupation={"CEO Sia “ABCDE”"}
-                  description={value.excerpt.rendered}
-                  imgSrc={src}
+                  occupation={value.acf.company}
+                  description={value.acf.comment}
+                  imgSrc={value.acf.image}
                 />
               </div>
             );
@@ -48,12 +45,6 @@ export const FeedBack = () => {
   useEffect(() => {
     getRevives(setReviews);
   }, []);
-
-  // getRevives(setGetReviews);
-  // <div
-  //   // contentEditable="true"
-  //   dangerouslySetInnerHTML={{ __html: "" }}
-  // ></div>;
 
   return (
     <section className="FeedBack">
@@ -68,42 +59,14 @@ export const FeedBack = () => {
             style={{ stroke: "#fb7840", strokeWidth: "3px" }}
           />
         </svg>
-        <div className="FeedBack__content">
-          {Reviews}
-          {/* <Client
-            name={"Jānis Kalniņš"}
-            occupation={"CEO Sia “ABCDE”"}
-            description={
-              "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penat."
-            }
-            imgSrc={teamMember}
-          />
-          <Client
-            name={"Jānis Kalniņš"}
-            occupation={"CEO Sia “ABCDE”"}
-            description={
-              "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penat."
-            }
-            imgSrc={teamMember}
-          />
-          <Client
-            name={"Jānis Kalniņš"}
-            occupation={"CEO Sia “ABCDE”"}
-            description={
-              "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penat."
-            }
-            imgSrc={teamMember}
-          />
-          <Client
-            name={"Jānis Kalniņš"}
-            occupation={"CEO Sia “ABCDE”"}
-            description={
-              "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penat."
-            }
-            imgSrc={teamMember}
-          /> */}
-        </div>
+        <div className="FeedBack__content">{Reviews}</div>
       </div>
     </section>
   );
 };
+
+// getRevives(setGetReviews);
+// <div
+//   // contentEditable="true"
+//   dangerouslySetInnerHTML={{ __html: "" }}
+// ></div>;
