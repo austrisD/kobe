@@ -91,7 +91,7 @@ export const Marketing = () => {
           className="marketing__content__element docs__element"
           style={{ backgroundColor: "#FB7840" }}
         >
-          <div className="docs__element__corner">Iespēja iegūt papildus</div>
+          <div className="docs__element__corner">Dokumentu komplekts</div>
           <Docs />
           <h4>Praktiska palīdzība</h4>
           <p className="marketing__element__description docs__element__description">
