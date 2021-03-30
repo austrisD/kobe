@@ -1,7 +1,25 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { ReactComponent as HeaderPC } from "../resources/svg/header_pc.svg";
 
 export const Header = () => {
+  const CEO = useRef(null);
+
+  const [CursorLocation, setCursorLocation] = useState({
+    active: false,
+    debounce: true,
+    X: 0,
+    Y: 0,
+  });
+
+  useEffect(() => {
+    console.log(CEO);
+    let X = 0;
+    let Y = 0;
+    // let XMove = CEO.current.movementX > 0 ? X++ : X--;
+    // let YMove = CEO.current.movementY > 0 ? 1 : 0;
+    CEO.current.style.transform = `rotateY(${Y}deg) rotateX(${X}deg)`;
+  }, [CursorLocation]);
+
   return (
     <header
       className="header"
@@ -25,7 +43,29 @@ export const Header = () => {
           Individuāla konsultācija par efektīvu un kvalitatīvu mājas lapa
         </p>
       </div>
-      <div className="header__CEO">
+      <div
+        className="header__CEO"
+        ref={CEO}
+        onMouseEnter={() => {
+          CursorLocation.active = true;
+        }}
+        onMouseMove={(e) => {
+          if (!CursorLocation.active) return;
+          if (parseInt(e.timeStamp.toFixed()) > CursorLocation.debounce) {
+            setCursorLocation({
+              active: true,
+              debounce: parseInt(e.timeStamp.toFixed()) + 100,
+              X: e.movementX,
+              Y: e.movementY,
+            });
+          }
+        }}
+        onMouseLeave={() => {
+          CursorLocation.active = false;
+          CursorLocation.X = false;
+          CursorLocation.Y = false;
+        }}
+      >
         <div className="header__CEO_contents">
           <p className="header__CEO__quote">
             <span className="Upper__quotes">“</span>

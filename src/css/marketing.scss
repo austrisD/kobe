@@ -134,6 +134,27 @@
   }
 }
 .docs__element {
+  overflow: hidden;
+  .docs__element__corner {
+    box-sizing: border-box;
+    width: 170px;
+    background-color: $darkBlue;
+    color: #fff;
+    font-family: "Roboto-Bold";
+    text-align: center;
+    font-size: 12px;
+    white-space: pre-line;
+    align-self: flex-end;
+    transform: rotate(45deg);
+    padding: 40px 50px 9px;
+    margin-right: -85px;
+    margin-top: -35px;
+    margin-bottom: -30px;
+    @include laptop() {
+      margin-right: -75px;
+      margin-top: -45px;
+    }
+  }
   h4 {
     color: #fff;
   }
@@ -155,10 +176,3 @@
     }
   }
 }
-//    li::before {
-//       content: "\2022";
-//       color: $mainOrange;
-//       font-size: 40px;
-//       line-height: 16px;
-//       padding-right: 3px;
-//     }

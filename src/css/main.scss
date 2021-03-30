@@ -85,27 +85,18 @@
   }
 
   .content__Warper {
-    position: relative;
-    box-sizing: border-box;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    justify-content: center;
     margin: 0 auto;
-    width: 100%;
+    width: initial;
     z-index: 1;
-
-    @include tablet() {
-    }
     @include laptop() {
       flex-direction: row;
-    }
-    @include desktop() {
     }
   }
   .main__content__text {
     box-sizing: border-box;
-    position: relative;
     font-family: "Roboto-Regular";
     font-size: 16px;
     color: $textGray;

@@ -4,8 +4,6 @@
   box-sizing: border-box;
   background-color: $liteBlue;
   padding: 26px 44px 73px 36px;
-  width: max-content;
-  width: 100%;
   @include tablet() {
     padding: 26px 66px 78px 36px;
   }
@@ -14,6 +12,7 @@
   }
   @include desktop() {
     padding: 31px 45px 56px;
+    min-width: 431px;
   }
   .Apply__heading {
     font-size: 30px;
@@ -105,19 +104,20 @@
   svg {
     transform: translateY(-100%);
     @include laptop() {
-      margin-left: -14px; //asda
+      margin-left: -14px;
     }
     @include desktop() {
       margin: 0;
+      margin: 0 15px;
     }
   }
   .apply__process__step {
-    padding: 0 15px 12px; ///posable margin
+    padding: 0 15px 12px;
     @include laptop() {
       padding: 0 0 12px 15px;
     }
     @include desktop() {
-      padding: 0 15px 12px;
+      padding: 0 0 12px;
     }
     .apply__circle {
       text-align: center;
@@ -155,7 +155,7 @@
     }
     .apply__process__step__name {
       position: absolute;
-      transform: translateX(-50%);
+      transform: translateX(-35%);
       color: #fff;
       font-family: "Roboto-Bold";
       font-size: 14px;

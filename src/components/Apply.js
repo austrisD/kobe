@@ -167,7 +167,7 @@ export const Apply = () => {
               uzturēšan.
             </div>
           </div>
-          <div className="apply__process__step__name">Saņem konsultāciju</div>
+          <p className="apply__process__step__name">Saņem konsultāciju</p>
         </div>
       </div>
     </section>

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import teamMember from "../resources/jpg/teamMember.jpeg";
 
 export const FeedBack = () => {
   const [Reviews, setReviews] = useState("");
@@ -27,14 +26,14 @@ export const FeedBack = () => {
       .then((response) => {
         set(
           response.map((value, id) => {
-            // console.log(value);
+            const { company, comment, image } = value.acf;
             return (
               <div key={id}>
                 <Client
                   name={value.title.rendered}
-                  occupation={value.acf.company}
-                  description={value.acf.comment}
-                  imgSrc={value.acf.image}
+                  occupation={company}
+                  description={comment}
+                  imgSrc={image}
                 />
               </div>
             );
