@@ -91,9 +91,9 @@ export const Marketing = () => {
           className="marketing__content__element docs__element"
           style={{ backgroundColor: "#FB7840" }}
         >
-          <div className="docs__element__corner">Dokumentu komplekts</div>
+          <div className="docs__element__corner">Iespēja iegūt papildus</div>
           <Docs />
-          <h4>Praktiska palīdzība</h4>
+          <h4>Dokumentu komplekts</h4>
           <p className="marketing__element__description docs__element__description">
             Pēc konsultācijas Jūs saņemsiet dokumentus, kuros ir apkopota visa
             konsultācijā minētā informācija.
