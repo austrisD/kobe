@@ -56,7 +56,8 @@ header {
   }
 
   .header__CEO {
-    // backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: 100ms;
     position: relative;
     box-sizing: border-box;
     width: 100%;

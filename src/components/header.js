@@ -1,32 +1,23 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState } from "react";
 import { ReactComponent as HeaderPC } from "../resources/svg/header_pc.svg";
 
 export const Header = () => {
-  const CEO = useRef(null);
+  const [Position, setPosition] = useState({ X: 0, Y: 0 });
+  const [Debounce, setDebounce] = useState(false);
 
-  const [CursorLocation, setCursorLocation] = useState({
+  let CursorFunction = {
     active: false,
-    debounce: true,
     X: 0,
     Y: 0,
-  });
-
-  useEffect(() => {
-    console.log(CEO);
-    let X = 0;
-    let Y = 0;
-    // let XMove = CEO.current.movementX > 0 ? X++ : X--;
-    // let YMove = CEO.current.movementY > 0 ? 1 : 0;
-    CEO.current.style.transform = `rotateY(${Y}deg) rotateX(${X}deg)`;
-  }, [CursorLocation]);
+    manageAxis(e) {
+      e.movementX > 0 ? this.X++ : this.X--;
+      e.movementY > 0 ? this.Y++ : this.Y--;
+      console.log(this);
+    },
+  };
 
   return (
-    <header
-      className="header"
-      onReset={() => {
-        console.log("asdsad");
-      }}
-    >
+    <header className="header">
       <div className="header__warper">
         <HeaderPC className="header__pc" />
         <h1 className="header__h1">WEB KONSULTANTS</h1>
@@ -45,25 +36,23 @@ export const Header = () => {
       </div>
       <div
         className="header__CEO"
-        ref={CEO}
         onMouseEnter={() => {
-          CursorLocation.active = true;
+          CursorFunction.active = true;
         }}
         onMouseMove={(e) => {
-          if (!CursorLocation.active) return;
-          if (parseInt(e.timeStamp.toFixed()) > CursorLocation.debounce) {
-            setCursorLocation({
-              active: true,
-              debounce: parseInt(e.timeStamp.toFixed()) + 100,
-              X: e.movementX,
-              Y: e.movementY,
-            });
+          if (!CursorFunction.active) return;
+          if (parseInt(e.timeStamp.toFixed()) > Debounce) {
+            setDebounce(parseInt(e.timeStamp.toFixed()) + 100);
+            CursorFunction.manageAxis(e);
+            setPosition({ X: 10, Y: 10 });
           }
         }}
         onMouseLeave={() => {
-          CursorLocation.active = false;
-          CursorLocation.X = false;
-          CursorLocation.Y = false;
+          CursorFunction.active = false;
+          setPosition({ X: 0, Y: 0 });
+        }}
+        style={{
+          transform: `rotateY(${Position.Y}deg) rotateX(${Position.X}deg)`,
         }}
       >
         <div className="header__CEO_contents">
